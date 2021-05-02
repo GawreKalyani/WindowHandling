@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [JBK Offline Application]">
+  <listeners>
+    <listener class-name="listener.ListenerExample"/>
+  </listeners>
+  <test name="Login Module(failed)">
+    <classes>
+      <class name="listener.Demo1Fortestng">
+        <methods>
+          <include name="loginTest"/>
+          <include name="test03"/>
+          <include name="verifyTitle"/>
+        </methods>
+      </class> <!-- listener.Demo1Fortestng -->
+      <class name="com.javabykiran.BasicTesting">
+        <methods>
+          <include name="verifyDivision"/>
+          <include name="verifyAddition"/>
+        </methods>
+      </class> <!-- com.javabykiran.BasicTesting -->
+    </classes>
+  </test> <!-- Login Module(failed) -->
+</suite> <!-- Failed suite [JBK Offline Application] -->

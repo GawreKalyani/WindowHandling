@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="2739" started-at="2021-05-01T03:40:20Z" finished-at="2021-05-01T03:40:23Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="2739" started-at="2021-05-01T03:40:20Z" finished-at="2021-05-01T03:40:23Z">
+      <class name="window.WindowHandling">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:window.WindowHandling@643b1d11]" name="setUp" is-config="true" duration-ms="2162" started-at="2021-05-01T09:10:20Z" finished-at="2021-05-01T09:10:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="wintest()[pri:0, instance:window.WindowHandling@643b1d11]" name="wintest" duration-ms="559" started-at="2021-05-01T09:10:23Z" finished-at="2021-05-01T09:10:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wintest -->
+      </class> <!-- window.WindowHandling -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

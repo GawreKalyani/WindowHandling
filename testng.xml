@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="JBK Offline Application">
+<listeners>
+	<listener class-name="listener.ListenerExample"></listener>
+</listeners>
+  <test name="Login Module">
+    <classes>
+      <class name="listener.Demo1Fortestng"/> 
+        <class name="com.javabykiran.BasicTesting"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
