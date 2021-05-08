@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\rajat\AppData\Local\Temp\testng-eclipse--1684490680\testng-customsuite.xml</span>
+                    <span>C:\Users\rajat\AppData\Local\Temp\testng-eclipse--1850646869\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="window.WindowHandling" hash-for-method="wintest">wintest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="tableTestCases.A" hash-for-method="testDeleteBtnRow2and4">testDeleteBtnRow2and4</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -120,14 +120,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">window.WindowHandling</span>
+              <span class="class-name">tableTestCases.A</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="wintest">
-                  </a> <!-- wintest -->
-                  <span class="method-name">wintest</span>
+                  <a name="testDeleteBtnRow2and4">
+                  </a> <!-- testDeleteBtnRow2and4 -->
+                  <span class="method-name">testDeleteBtnRow2and4</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -135,7 +135,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\rajat\AppData\Local\Temp\testng-eclipse--1684490680\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\rajat\AppData\Local\Temp\testng-eclipse--1850646869\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -144,7 +144,11 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;window.WindowHandling&quot;/&gt;
+      &lt;class name=&quot;tableTestCases.A&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;testDeleteBtnRow2and4&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- tableTestCases.A --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -186,14 +190,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'wintest')
-data.setCell(0, 2, 'window.WindowHandling')
-data.setCell(0, 3, 559);
+data.setCell(0, 1, 'testDeleteBtnRow2and4')
+data.setCell(0, 2, 'tableTestCases.A')
+data.setCell(0, 3, 4221);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 559 ms</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -208,9 +212,28 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">7 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">tableTestCases.A</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">verifyJBK_Link</span>
+                <br/>
+                <span class="ignored-method-name">testHh</span>
+                <br/>
+                <span class="ignored-method-name">verifyMobile</span>
+                <br/>
+                <span class="ignored-method-name">testMobNo</span>
+                <br/>
+                <span class="ignored-method-name">verifyTeacherNameForJava</span>
+                <br/>
+                <span class="ignored-method-name">testNavigator</span>
+                <br/>
+                <span class="ignored-method-name">testHhgg</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -219,14 +242,10 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">window.WindowHandling</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
+              <div class="chronological-class-name">tableTestCases.A</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">wintest</span>
-                <span class="method-start">2180 ms</span>
+                <span class="method-name">testDeleteBtnRow2and4</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

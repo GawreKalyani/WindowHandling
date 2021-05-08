@@ -1,6 +1,9 @@
 package window;
 
 
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,32 +15,30 @@ public class Yahoo {
 	WebDriver driver;
 
 	@Test
-	public void yahooNewsTest()throws Exception {
-		
+	public void yahooNews(){
 		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.manage().window().maximize();
 		driver.get("https://in.yahoo.com/");
-		Thread.sleep(10000);
-		for(int i=1;i<=10;i++) {
-			String xpath ="//span[contains(text(),'"+i+"')]//following-sibling::span]";
-			System.out.println(xpath);
-			WebElement news = driver.findElement(By.xpath(xpath));
-		
-			System.out.println(news.getText());
+		driver.manage().timeouts().pageLoadTimeout(7, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		List<WebElement>news=driver.findElements(By.xpath("//li[@data-test-locator='tnitem']"));
+		for(WebElement ele:news){
+			String text=ele.getText();
+			System.out.println(text);
 		}
-		
 	}
 }
 
 /* driver.findElement(By.xpath("//span[contains(text(),"+i+"."+")]//following-sibling::span"));       
- *  COVID-19 in India
-           Narendra Modi
-           Lalu Prasad Yadav
-           Nambi Narayanan
-           Nawab Malik
-           DSP mutual fund
-           Deep Sindhu
-           Sonu Sood
-           Vinesh Phogat
-            IPL 2021           */
+1. COVID-19 in India
+2. Anil Deshmukh
+3. Ajit Singh
+4. Tejasvi Surya
+5. Tathagata Roy
+6. Stock market today
+7. Dalip Tahil
+8. Abhilasha Patil
+9. West Bengal violence
+10. V. Muraleedharan
+                     */

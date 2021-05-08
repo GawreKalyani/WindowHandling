@@ -30,9 +30,9 @@ public class Win4 {
 		System.out.println("Parent Window Id= "+parentId);
 		
 		List<WebElement>moreInfo=driver.findElements(By.partialLinkText("More"));
-		for(int i=0;i<=3;i++)
+		for(WebElement link:moreInfo)
 		{
-			moreInfo.get(i).click();
+		        link.click();
 		}
 		Set<String>allwindows=driver.getWindowHandles();
 		for(String str:allwindows)

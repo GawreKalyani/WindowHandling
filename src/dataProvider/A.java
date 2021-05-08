@@ -18,7 +18,6 @@ public class A {
 		driver.manage().window().maximize();// to maximize the browser
 	}
 	
-	
 	@Test(dataProvider = "loginData")
 	public void test01(String uname, String pass) {
 		driver.findElement(By.id("email")).clear();
@@ -28,7 +27,7 @@ public class A {
 		driver.findElement(By.xpath("//button")).click();
 		if(driver.getTitle().equals("JavaByKiran | Dashboard"))
 			driver.findElement(By.xpath("//a[text()='LOGOUT']")).click();
-	//log out button click
+	
 	}
 	@DataProvider
 	  public Object[][] loginData() {

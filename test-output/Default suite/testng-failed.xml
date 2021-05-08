@@ -3,12 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="window.Win4">
+      <class name="tableTestCases.A">
         <methods>
-          <include name="testWindows"/>
-          <include name="setup"/>
+          <include name="testDeleteBtnRow2and4"/>
         </methods>
-      </class> <!-- window.Win4 -->
+      </class> <!-- tableTestCases.A -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
