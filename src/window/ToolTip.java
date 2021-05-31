@@ -17,10 +17,13 @@ public class ToolTip {
 		driver.get("file:///C:/Users/rajat/Downloads/Selenium%20Softwares/Offline%20Website/Offline%20Website/index.html");
 		driver.manage().window().maximize();// to maximize the browser
 		}
-	@Test(priority=1)
+	@Test(priority=1)	//getting value passed in textbox
 	public void testLogin(){
 		driver.findElement(By.id("email")).sendKeys("kiran@gmail.com");
+		String x=driver.findElement(By.id("email")).getAttribute("value");
+		System.out.println(x);
 		driver.findElement(By.id("password")).sendKeys("123456");
+		System.out.println(driver.findElement(By.id("password")).getAttribute("value"));
 		driver.findElement(By.xpath("//button")).click();
 		}
 	

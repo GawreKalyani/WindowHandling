@@ -10,7 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 public class NaukriSite {
-
+//List comes:use there moveToElement()
 	@Test
 	public void test1(){
 		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");

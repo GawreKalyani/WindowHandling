@@ -201,8 +201,8 @@ public Object[][] loginData() {
   };
 } 
 
-@Test
-public void test02User(){
+@Test(dataProvider="loginData1")
+public void test02User(String sr,String name,String email,String mobile,String course,String gender,String state,String action){
 	System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 	WebDriver driver = new ChromeDriver();
 	driver.get("file:///C:/Users/rajat/Downloads/Selenium%20Softwares/Offline%20Website/Offline%20Website/index.html");
@@ -210,23 +210,34 @@ public void test02User(){
 	driver.findElement(By.id("password")).sendKeys("123456");
 	driver.findElement(By.xpath("//button")).click();
 	driver.findElement(By.xpath("//span[text()='Users']")).click();	
-	if(row==2){
-		List<WebElement>rowData1= driver.findElements(By.xpath("//tr["+row+"]/td"));
+	ArrayList<String>actData=new ArrayList<String>();
+	ArrayList<String> expData = new ArrayList<String>();
+	expData.add(sr);
+	expData.add(name);
+	expData.add(email);
+	expData.add(mobile);
+	expData.add(course);
+	expData.add(gender);
+	expData.add(state);
+	expData.add(action);
+		List<WebElement>rowData1= driver.findElements(By.xpath("//tr"));
 		for(WebElement ele:rowData1)
 		{
 			String text=ele.getText();
 			System.out.println(text);
+			actData.add(text);
 		}
-		row++;
-		}
-	else {
-			List<WebElement> rowData = driver.findElements(By.xpath("//tr["+row+"]/td"));// 8 element
-			for (WebElement element : rowData) 
-			{
-				String text = element.getText();
-				System.out.println(text);
-		    }
-			row++;
-		}
+		
 }
+@DataProvider
+public Object[][] loginData1() {
+  return new Object[][] {
+	  new Object[] {"#","Username","Email","Mobile","Course","Gender","State","Action"},
+    new Object[] {"1","Kiran","kiran@gmail.com","9898989898","Java/J2EE","Male","Maharashtra","Delete" },
+    new Object[] {"2","Sagar","sagar@gmail.com","999999999","Selenium","Male","Punjab","Delete" },
+    new Object[] {"3","Monica","monica@gmail.com", "1111111111","Python","Female","Maharashtra","Delete" },
+    new Object[] {"4","Kimaya","kimaya@gmail.com", "999999999","PHP","Female","Punjab","Delete" },
+  };
+} 
+//# Username Email Mobile Course Gender State Action
 }

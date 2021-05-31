@@ -188,7 +188,20 @@ public class B {
        Assert.assertEquals(actData, expData);
 	}
 	
-	
+	@Test
+	public void SortingNames(){
+		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("file:///C:/Users/rajat/Downloads/Selenium%20Softwares/Offline%20Website/Offline%20Website/index.html");
+		driver.findElement(By.id("email")).sendKeys("kiran@gmail.com");
+		driver.findElement(By.id("password")).sendKeys("123456");
+		driver.findElement(By.xpath("//button")).click();
+		driver.findElement(By.xpath("//span[text()='Users']")).click();	
+		List<WebElement>names=driver.findElements(By.xpath("//td[2]"));
+		/*for(WebElement ele:names){
+			String y=ele.getText();
+		}
+*/	}
 	
 	
 	

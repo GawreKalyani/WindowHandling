@@ -66,4 +66,49 @@ public class C {
 	}
 
    }//testcase2 end
+	
+	@Test
+	public void verifyOpTableTeacherForTechnicalHelp() {
+		
+		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("file:///C:/Users/rajat/Downloads/Selenium%20Softwares/Offline%20Website/Offline%20Website/index.html");
+		driver.findElement(By.id("email")).sendKeys("kiran@gmail.com");
+		driver.findElement(By.id("password")).sendKeys("123456");
+		driver.findElement(By.xpath("//button")).click();
+		driver.findElement(By.xpath("//span[text()='Operators']")).click();
+		List<WebElement>helpfor=driver.findElements(By.xpath("//td[3]"));
+		for(WebElement ele:helpfor){
+			if(ele.getText().contains("Urgent Technical Help")){
+				int index=helpfor.indexOf(ele)+2;
+				String name=driver.findElement(By.xpath("//tr["+index+"]/td[2]")).getText();
+				Assert.assertEquals(name, "Kiran");
+			}
+		}
+	}
+	@Test
+	public void verifylistOfToolTip(){
+
+		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("file:///C:/Users/rajat/Downloads/Selenium%20Softwares/Offline%20Website/Offline%20Website/index.html");
+		driver.findElement(By.id("email")).sendKeys("kiran@gmail.com");
+		driver.findElement(By.id("password")).sendKeys("123456");
+		driver.findElement(By.xpath("//button")).click();
+		ArrayList<String> actData = new ArrayList<String>();
+		ArrayList<String> expData = new ArrayList<String>();
+		expData.add("Click to Delete");
+		expData.add("Click to Delete");
+		expData.add("Click to Delete");
+		expData.add("Click to Delete");
+		driver.findElement(By.xpath("//span[text()='Users']")).click();
+		List<WebElement>dltBtn=driver.findElements(By.xpath("//span[text()='Delete']"));
+		for(WebElement ele:dltBtn){
+			String text=ele.getAttribute("title");
+			System.out.println(text);
+			actData.add(text);
+		}
+		Assert.assertEquals(actData, expData);
+	}
+		
 }//class end

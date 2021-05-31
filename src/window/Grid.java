@@ -36,7 +36,7 @@ public class Grid {
 
     }
     @Test
-    public void test(){
+    public void verifyTitle(){
     	Assert.assertEquals(driver.getTitle(), "JavaByKiran | Log in");
     }
 }

@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="7" total="8" passed="1">
+<testng-results skipped="0" failed="0" ignored="4" total="5" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4257" started-at="2021-05-08T06:13:09Z" finished-at="2021-05-08T06:13:13Z">
+  <suite name="Default suite" duration-ms="3773" started-at="2021-05-31T13:26:38Z" finished-at="2021-05-31T13:26:42Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4257" started-at="2021-05-08T06:13:09Z" finished-at="2021-05-08T06:13:13Z">
-      <class name="tableTestCases.A">
-        <test-method status="PASS" signature="testDeleteBtnRow2and4()[pri:0, instance:tableTestCases.A@56f4468b]" name="testDeleteBtnRow2and4" duration-ms="4221" started-at="2021-05-08T11:43:09Z" finished-at="2021-05-08T11:43:13Z">
+    <test name="Default test" duration-ms="3773" started-at="2021-05-31T13:26:38Z" finished-at="2021-05-31T13:26:42Z">
+      <class name="window.ToolTip">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:window.ToolTip@396a51ab]" name="setUp" is-config="true" duration-ms="2725" started-at="2021-05-31T18:56:38Z" finished-at="2021-05-31T18:56:41Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testDeleteBtnRow2and4 -->
-      </class> <!-- tableTestCases.A -->
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testLogin()[pri:1, instance:window.ToolTip@396a51ab]" name="testLogin" duration-ms="1030" started-at="2021-05-31T18:56:41Z" finished-at="2021-05-31T18:56:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+      </class> <!-- window.ToolTip -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

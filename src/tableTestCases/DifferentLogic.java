@@ -100,4 +100,32 @@ public void testAllNamesForMaha(){
 	}
 	Assert.assertEquals(actData, expData);
 }
+@Test 
+public void testOp(){
+	System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+	WebDriver driver = new ChromeDriver();
+	driver.get("file:///C:/Users/rajat/Downloads/Selenium%20Softwares/Offline%20Website/Offline%20Website/index.html");
+	driver.findElement(By.id("email")).sendKeys("kiran@gmail.com");
+	driver.findElement(By.id("password")).sendKeys("123456");
+	driver.findElement(By.xpath("//button")).click();
+	driver.findElement(By.xpath("//span[text()='Downloads']")).click();
+	ArrayList<String> expData = new ArrayList<String>();
+	expData.add("Java Development Kit (JDK)");
+	expData.add("Google Chrome");
+	expData.add("Mozilla Firefox");
+	expData.add("Gecko Driver for Latest firefox");
+	
+	List<WebElement>bit32s=driver.findElements(By.xpath("//tr/td[5]"));
+	ArrayList<String> actData = new ArrayList<String>();
+	 for(WebElement ele:bit32s){
+		 if(ele.getText().equals("32bit")) {
+			 int index=bit32s.indexOf(ele)+2; 
+			String name=driver.findElement(By.xpath("//tr["+index+"]/td[3]")).getText();
+			System.out.println(name);
+			actData.add(name);
+		 }
+}
+	 Assert.assertEquals(actData, expData);
+}
+	
 }
