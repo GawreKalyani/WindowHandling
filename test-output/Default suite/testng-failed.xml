@@ -3,11 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="window.Yahoo">
+      <class name="utility.Main">
         <methods>
-          <include name="datePicker"/>
+          <include name="openBrowser"/>
+          <include name="dateOfBirth"/>
         </methods>
-      </class> <!-- window.Yahoo -->
+      </class> <!-- utility.Main -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

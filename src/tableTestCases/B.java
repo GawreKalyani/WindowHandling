@@ -1,6 +1,7 @@
 package tableTestCases;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -197,11 +198,41 @@ public class B {
 		driver.findElement(By.id("password")).sendKeys("123456");
 		driver.findElement(By.xpath("//button")).click();
 		driver.findElement(By.xpath("//span[text()='Users']")).click();	
+		ArrayList<String>actData=new ArrayList<String>();
 		List<WebElement>names=driver.findElements(By.xpath("//td[2]"));
-		/*for(WebElement ele:names){
+		for(WebElement ele:names){
 			String y=ele.getText();
+			actData.add(y);
 		}
-*/	}
+		Collections.sort(actData);
+		System.out.println(actData);
+		ArrayList<String>expData=new ArrayList<>();
+		expData.add("Kimaya");expData.add("Kiran");expData.add("Monica");expData.add("Sagar");
+		Assert.assertEquals(actData, expData);
+	}
+	
+	@Test
+	public void descSortingNames(){
+		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("file:///C:/Users/rajat/Downloads/Selenium%20Softwares/Offline%20Website/Offline%20Website/index.html");
+		driver.findElement(By.id("email")).sendKeys("kiran@gmail.com");
+		driver.findElement(By.id("password")).sendKeys("123456");
+		driver.findElement(By.xpath("//button")).click();
+		driver.findElement(By.xpath("//span[text()='Users']")).click();	
+		ArrayList<String>actData=new ArrayList<String>();
+		List<WebElement>names=driver.findElements(By.xpath("//td[2]"));
+		for(WebElement ele:names){
+			String y=ele.getText();
+			actData.add(y);
+		}
+		Collections.sort(actData,Collections.reverseOrder());
+		System.out.println(actData);
+		
+		ArrayList<String>expData=new ArrayList<>();
+		expData.add("Sagar");expData.add("Monica");expData.add("Kiran");expData.add("Kimaya");
+		Assert.assertEquals(actData, expData);
+	}
 	
 	
 	

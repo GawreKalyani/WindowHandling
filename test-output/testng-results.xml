@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="4" total="5" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3773" started-at="2021-05-31T13:26:38Z" finished-at="2021-05-31T13:26:42Z">
+  <suite name="Default suite" duration-ms="4648" started-at="2021-06-23T06:25:57Z" finished-at="2021-06-23T06:26:02Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="3773" started-at="2021-05-31T13:26:38Z" finished-at="2021-05-31T13:26:42Z">
-      <class name="window.ToolTip">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:window.ToolTip@396a51ab]" name="setUp" is-config="true" duration-ms="2725" started-at="2021-05-31T18:56:38Z" finished-at="2021-05-31T18:56:41Z">
+    <test name="Default test" duration-ms="4648" started-at="2021-06-23T06:25:57Z" finished-at="2021-06-23T06:26:02Z">
+      <class name="utility.Main">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:utility.Main@5034c75a]" name="openBrowser" is-config="true" duration-ms="7509" started-at="2021-06-23T11:55:50Z" finished-at="2021-06-23T11:55:57Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testLogin()[pri:1, instance:window.ToolTip@396a51ab]" name="testLogin" duration-ms="1030" started-at="2021-05-31T18:56:41Z" finished-at="2021-05-31T18:56:42Z">
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="dateOfBirth()[pri:0, instance:utility.Main@5034c75a]" name="dateOfBirth" duration-ms="4605" started-at="2021-06-23T11:55:57Z" finished-at="2021-06-23T11:56:02Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLogin -->
-      </class> <!-- window.ToolTip -->
+        </test-method> <!-- dateOfBirth -->
+      </class> <!-- utility.Main -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
