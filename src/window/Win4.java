@@ -42,7 +42,7 @@ public class Win4 {
 				System.out.println("child Window id:"+str);
 				
 				driver.switchTo().window(str);
-		
+				
 			}
 		}
 	}

@@ -2,11 +2,14 @@
 /autoIt/
 /com/
 /dataProvider/
+/exceptions/
 /headLessBrowser/
 /javascriptExecuter/
 /listener/
 /locators8/
+/parallelTesting/
+/softHardAssert/
 /tableTestCases/
 /utility/
-/wait/
+/waitAndException/
 /window/

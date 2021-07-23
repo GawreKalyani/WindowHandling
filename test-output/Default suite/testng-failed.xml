@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="utility.Main">
+      <class name="softHardAssert.Verify">
         <methods>
-          <include name="openBrowser"/>
-          <include name="dateOfBirth"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="softAssEx"/>
         </methods>
-      </class> <!-- utility.Main -->
+      </class> <!-- softHardAssert.Verify -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

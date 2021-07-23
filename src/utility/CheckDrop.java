@@ -28,7 +28,7 @@ public static void testCheckbox(String []array,List<WebElement>elements){
 			for (String s : array) {
 					for(WebElement element:elements)
 					{
-						if(element.getAttribute("value").equals(s))
+						if(element.getText().equals(s))
 						{
 							element.click();
 							break;

@@ -14,7 +14,7 @@ public class ListenerExample implements ITestListener {
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-System.out.println("testcase passed with name "+result.getName());
+    System.out.println("testcase passed with name "+result.getName());
 		
 	}
 
