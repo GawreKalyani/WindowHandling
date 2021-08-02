@@ -1,0 +1,24 @@
+To Register a Hub---port no:4444
+
+java -jar selenium-server-standalone-3.9.0.jar -role hub
+
+Node1---firefox--4456
+java -Dwebdriver.gecko.driver="C:\geckodriver.exe" -jar selenium-server-standalone-3.9.0.jar -role webdriver -hub http://localhost:4444/grid/register -port 4456
+
+Node 2---chrome 4455
+java -Dwebdriver.chrome.driver="C:\chromedriver.exe" -jar selenium-server-standalone-3.9.0.jar -role webdriver -hub http://localhost:4444/grid/register -port 4455
+
+
+
+Steps to perform:-
+1. Create Grid folder which contains selenium-server-standalone-3.9.0.jar(Grid folder is made in drive D)
+2.Keep chromedriver.exe in C drive
+3. C:\Windows\System32\cmd.exe here Open cmd and type   java -jar selenium-server-standalone-3.9.0.jar -role hub
+	so as to register selenium hub on port 4444 automatically.
+
+4. Again C:\Windows\System32\cmd.exe here Open  another cmd and type
+java -Dwebdriver.chrome.driver="C:\chromedriver.exe" -jar selenium-server-standalone-3.9.0.jar -role webdriver -hub http://localhost:4444/grid/register -port 4455
+	Thus chrome  gets registered on port 4455
+5. Again C:\Windows\System32\cmd.exe here Open  another ie 3rd cmd and type
+java -Dwebdriver.gecko.driver="C:\geckodriver.exe" -jar selenium-server-standalone-3.9.0.jar -role webdriver -hub http://localhost:4444/grid/register -port 4456
+	Thus firefox get registered on port 4456

@@ -1,5 +1,6 @@
 /actionsClass/
 /autoIt/
+/collection/
 /com/
 /dataProvider/
 /exceptions/
@@ -12,4 +13,4 @@
 /tableTestCases/
 /utility/
 /waitAndException/
-/window/
+/windowGrid/

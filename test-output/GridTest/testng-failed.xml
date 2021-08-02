@@ -4,12 +4,13 @@
   <test name="Chrome Test(failed)" parallel="tests">
     <parameter name="Port" value="4455"/>
     <classes>
-      <class name="window.Grid">
+      <class name="windowGrid.Grid">
         <methods>
-          <include name="setUp"/>
           <include name="verifyTitle"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- window.Grid -->
+      </class> <!-- windowGrid.Grid -->
     </classes>
   </test> <!-- Chrome Test(failed) -->
 </suite> <!-- Failed suite [GridTest] -->

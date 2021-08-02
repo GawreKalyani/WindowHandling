@@ -1,6 +1,8 @@
 package tableTestCases;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -11,6 +13,8 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 //import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import jxl.read.biff.BiffException;
 
 public class D {
 int row=2;	
@@ -133,7 +137,37 @@ public void verifyOperatorsNamesNotOnSunday() {
 				PASSED: verifyOperators  */
 	Assert.assertEquals(actData, expData);
 	}//testcaseEnd
+@Test
+public void verifyVendorAndVersionOf_32bit() throws BiffException, IOException {
+	System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+	WebDriver driver = new ChromeDriver();
+	driver.get("file:///C:/Users/rajat/Downloads/Selenium%20Softwares/Offline%20Website/Offline%20Website/index.html");
+	driver.findElement(By.id("email")).sendKeys("kiran@gmail.com");
+	driver.findElement(By.id("password")).sendKeys("123456");
+	driver.findElement(By.xpath("//button")).click();
+	
+	driver.findElement(By.xpath("//span[text()='Downloads']")).click();
+	HashMap<String,	List<String>> actualhm = new HashMap<String, List<String>>();
 
+	List<WebElement> bits = driver.findElements(By.xpath("//td[5]"));
+	List<WebElement> versions = driver.findElements(By.xpath("//td[4]"));
+	List<WebElement> vendors = driver.findElements(By.xpath("//td[3]"));
+	String version=null;
+	String vendor = null;
+	for (int i = 0; i < vendors.size(); i++) {
+		String key = bits.get(i).getText();
+
+		 version = versions.get(i).getText();
+		 vendor = vendors.get(i).getText();
+
+		List<String> al = new ArrayList<String>();
+		al.add(vendor);
+		al.add(version);
+
+		actualhm.put(key, al);
+		System.out.println(actualhm);
+	}
+	}
 @Test(dataProvider="loginData")
 public void test1(String sr,String name,String email,String mobile,String course,String gender,String state,String action){
 	System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
